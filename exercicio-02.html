@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 09</title>
+</head>
+<body>
+    <h1>Operadores de comparação e booleanos</h1>
+    <p>
+        Pedir para o usuário digitar dois números entre 0 e 10 e mostrar na tela um boolean indicando se a média é menor ou igual a 4. Porém, caso um único número seja 0, deve mostrar true
+    </p>
+    
+
+    <script>
+        let n1 = parseFloat(prompt("Digite um número de 0 a 10"));
+        let n2 = parseFloat(prompt("Digite mais um número de 0 a 10"));
+
+        let media = (n1 + n2) / 2;
+
+        alert ("Está reprovado? " + (media <= 4 || n1 == 0 || n2 == 0));
+        
+        console.log(5 > 10 && 0 > 5 || 10 > 5); // true
+    </script>
+</body>
+</html>
