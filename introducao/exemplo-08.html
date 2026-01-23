@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 08</title>
+</head>
+<body>
+    <p>Pedir para o usuário digitar dois números entre 0 a 10, e mostrar na tela um boolean
+        indicando se o segundo número é maior ou igual ao primeiro.
+    </p>
+    
+    <script>
+
+        let n1 = parseFloat(prompt("Digite um número de 0 a 10."));
+        let n2 = parseFloat(prompt("Digite mais um número de 0 a 10."));
+
+        if (n2 >= n1){
+            alert ("O segundo número é maior ou igual ao primeiro? " + true);
+        } else {
+            alert ("O segundo número é maior ou igual ao primeiro? " + false);
+        }
+
+        // Simplificando para não precisar de if:
+
+        alert("O segundo número é maior ou igual ao primeiro? " + (n2 >= n1));
+
+    </script>
+
+</body>
+</html>
