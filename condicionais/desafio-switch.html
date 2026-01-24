@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Swtich</title>
+</head>
+<body>
+    <script>
+        let x = "10";
+
+        switch(typeof x){
+            case "number":
+                console.log("Number type");
+                break;
+            case "boolean":
+                console.log("Boolean type");
+                break;
+            case "string":
+                console.log("String type");
+                break;
+            case "undefined":
+                console.log("Undefined type");
+                break;
+            case "null":
+                console.log("Null type");
+                break;
+            case "bigInt":
+                console.log("BigInt type");
+                break;
+            case "symbol":
+                console.log("Symbol type");
+                break;
+            default:
+                console.log("Unknow type");
+        }
+
+    </script>    
+</body>
+</html>

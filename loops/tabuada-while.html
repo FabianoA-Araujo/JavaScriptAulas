@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada com loop</title>
+</head>
+<body>
+    <h1>Tabuada com loop</h1>
+    
+    <script>
+        let n = parseFloat(prompt("Digite um número"));
+        
+        if (!isNaN(n)) {
+            let contador = 0;
+    
+            while(contador <= 10){
+                document.write(n + " x " + contador + " = " + n * contador + "<br>")
+                contador ++
+            }
+        } else {
+            alert("Digite apenas números")
+        }
+
+        // while(typeof n == NaN){
+        //     alert("Digite apenas números.")
+        // }
+
+
+    </script>
+</body>
+</html>
