@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada com loop</title>
+</head>
+<body>
+    <h1>Tabuada com loop</h1>
+    <p>Vamos simular dois dados (0 - 6).
+        Quantas vezes seria necessário jogar os dois dados
+        até que os dois números saiam repetidos?</p>
+    
+    <script>
+
+        let dado1 = 1;
+        let dado2 = 6;
+        let contador = 0;
+
+        while (dado1 !== dado2){
+            dado1 = Math.floor(Math.random() * 6) + 1;
+            dado2 = Math.floor(Math.random() * 6) + 1;
+            contador++                        
+        }
+
+        // document.write(`<pre>
+        //     dado 1 = ${dado1}
+        //     dado 2 = ${dado2}
+        //     Número de tentativas = ${contador}
+        //     </pre>`);
+
+        document.write("dado 1 = " + dado1 + "<br>");
+        document.write("dado 2 = " + dado2 + "<br>");
+        document.write("Número de tentativas: " + contador + "<br>" + "<br>");
+
+        document.write("-------------------------------------------------------------" + "<br>" + "<br>")
+
+        dado1 = 5;
+        dado2 = 3;
+
+        do{ 
+            dado1 = Math.floor(Math.random() * 6) + 1;
+            dado2 = Math.floor(Math.random() * 6) + 1;
+            contador++  
+        } while(dado1 !== dado2);
+
+        document.write("dado 1 = " + dado1 + "<br>");
+        document.write("dado 2 = " + dado2 + "<br>");
+        document.write("Número de tentativas: " + contador + "<br>" + "<br>");
+        
+    </script>
+</body>
+</html>
