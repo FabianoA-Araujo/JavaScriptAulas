@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imprimindo números pares.</title>
+</head>
+<body>
+    <p>
+        Pedir para um usuário digitar um número e mostrar todos os números pares, até o número que o usuário digitou.
+    </p>
+
+    <script>
+        let n = parseFloat(prompt("Digite um número"));
+
+        for(let i = 1; i <= n; i++){
+            if(i % 2 === 0) {
+            document.write("Número par: " + i + "<br>");
+            }
+        }
+
+        doument.write("<br>" + "------------------------------" + "<br>" + "<br>")
+
+
+        let b = parseFloat(prompt("Digite um número"));
+
+        // Começa em 0 e faz i = i + 2 a cada volta
+        for (let i = 0; i <= b; i += 2) {
+            document.write("Número par: " + i + "<br>");
+        }
+
+    </script>    
+</body>
+</html>
