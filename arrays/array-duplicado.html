@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays Duplicados</title>
+</head>
+<body>
+    <p>Dado um array de números, crie uma outra array contendo os números multiplicados por 2</p>
+
+    <script>
+        let numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 50];
+        console.log(numeros)
+        let numerosMultiplicados = []
+
+        // Forma tradicional:
+        // for(let i = 0; i < numeros.length; i++ ){
+        //     let numero = numeros[i] * 2;
+        //     numerosMultiplicados[numerosMultiplicados.length] = numero
+        // }
+
+        // Usando método push:
+        for(let i = 0; i < numeros.length; i++ ){
+        let numero = numeros[i] * 2;
+        numerosMultiplicados.push(numero); // aqui aceita empurrar mais de uma propriedad, por exemplo (numero, 18, true)
+        }
+
+        console.log(numerosMultiplicados);
+    </script>   
+</body>
+</html>

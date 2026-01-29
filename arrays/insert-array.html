@@ -6,27 +6,26 @@
     <title>Arrays</title>
 </head>
 <body>
+    <p>Na lista de nomes, adicione mais um nome a partir de um prompet(), antes de mostrar os nomes e a quantidade na tela</p>
 
     <script>
         // Sintaxe literal:
-        let nomes = ["Fabiano", "Luana", "Francisco", "Helena"];
-        console.log(nomes);
-        console.log(nomes[2]);
+        let nomes = ["Fabiano", "Luana", "Francisco", "Helena", "Maria", "Leonardo", "Livia"];
 
-        // Sintaxe com construtor, onde "new" cria um objeto
-        let nomes2 = new Array ("Fabiano", "Luana", "Francisco", "Helena", "Livia", "Leonardo")
-        console.log(nomes2);
-        console.log(nomes2[3]);
+        // exemplo inserindo diretamente no índice selecionado
+        // nomes[9] = "Beatriz";
 
-        // Imprimindo a lista com loop
+        let nomeDigitado = prompt("Digite seu nome.")
 
-        for(let i = 0; i < nomes2.length; i++){
-            console.log("nome: " + nomes2[i]);
+        nomes [nomes.length] = nomeDigitado;
+        nomes [nomes.length] = "Carla";
+
+
+        for(let i = 0; i < nomes.length; i++){
+            console.log("nome: " + nomes[i]);
         }
 
-        //Imprimindo a quantidade de elementos/tamanho do array:
-
-        console.log("O array possui " + nomes2.length + " elementos")
+        console.log("O array possui " + nomes.length + " elementos")
 
     </script>
     
