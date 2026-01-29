@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops e condicionais</title>
+</head>
+<body>
+    <p> Mostre na tela os números de 0 a 100, ignorando múltiplos de 10.
+        Porém, a cada iteração, sorteie um número de 1 a 100. Se o número
+        mostrado for divisível pelo número sorteado, interrompa o loop.
+    </p>
+
+    <script>
+        for(let i = 0; i <= 100; i++){
+            if(i === 0 || i % 10 !== 0){
+                console.log(i);
+            }
+
+            let numberSorted = Math.floor(Math.random() * 100 + 1);
+            if (i > 0 && i % numberSorted === 0){
+                console.log("Interrompido! " + i + " é divisíveil por " + numberSorted);
+                break;
+            }
+        }
+
+            // for(let i = 0; i <= 100; i++){
+            //     if(i % 10 === 0){
+            //         continue // Aqui o continue, na verdade, poderia ser traduzido como "pular" para facilitar o entendimento.
+            //     }
+            //     console.log(i)
+            // };
+
+
+    </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anos bissextos com loop</title>
+</head>
+<body>
+    <p>Imprima os anos bissextos de 1004 a 2024.
+        Sendo que, anos bissextos, são aqueles divisíveis por 4, múltiplos de 400, mas não múltiplos de 100.
+    </p>
+
+    <script>
+        for(let i = 1004; i <= 2024; i++){
+            if (i % 100 === 0){
+                continue;
+            } else if (i % 4  === 0 || i % 400 === 0){
+                console.log("Ano bissexto: " + i);
+            }
+
+        };
+    </script>
+    
+</body>
+</html>
