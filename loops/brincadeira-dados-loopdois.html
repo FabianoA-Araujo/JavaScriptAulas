@@ -11,18 +11,18 @@
     </p>
 
     <script>
-        let contadorMatches = 0;
+        let contadorPares = 0;
         let totalSorteios = 0;
 
-        while(contadorMatches < 10){
+        while(contadorPares < 10){
             let dado1 = Math.floor((Math.random() * 6 + 1));
             let dado2 = Math.floor((Math.random() * 6 + 1));
             document.write("dado 1 = " + dado1 + "<br>");
             document.write("dado 2 = " + dado2 + "<br>");
 
-            if (dado1 === dado2){
-                contadorMatches++;
-                document.write("Match número " + contadorMatches + " = " + dado1 + " e " + dado2 + "<br>")
+            if ((dado1 + dado2) % 2 == 0 && dado1 != dado2){
+                contadorPares++;
+                document.write("Par número " + contadorPares + " = " + dado1 + " e " + dado2 + "<br>")
             }
 
             totalSorteios++;
