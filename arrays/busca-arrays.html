@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscamento elementos na array</title>
+</head>
+<body>
+    <p>Dado uma array qualquer, mostre, em um alert, um boolean indicando se encontrou um dos seguintes valores nessa array: null, undefined ou NaN</p>
+
+    <script>
+        const lista = [15, 21, 40, 3, 7, "Francisco", "Deus", null, [], "14", 1, true, 9, 16, "nada", "nada"];
+
+        let encontrou = false;        
+
+        for(let i = 0; i < lista.length; i++){
+            let valor = lista[i]
+            if (valor === null || valor === undefined || isNaN(valor)){
+                encontrou = true;
+                break;
+            }
+        };
+
+        alert("Na array há algum null, undefined ou NaN? " + encontrou);
+
+
+
+
+    </script>
+    
+</body>
+</html>
