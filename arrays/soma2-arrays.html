@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando itens da array</title>
+</head>
+<body>
+    <p>Dado um array que pode conter valores de tipos diferentes, mostre num alert a soma de todos os números.</p>
+
+    <script>
+        const arr = [15, 21, 40, 3, 7, "Francisco", "Deus", null, [], "1", 1, true];
+        let soma = 0;
+
+        for (let i = 0; i < arr.length; i++){
+            
+            let contando = arr[i];
+            if(typeof contando === "number"){ //Aqui não dá para usar "isNaN(contando)" porque interpreta que string "1" é number
+                soma += contando; 
+            }
+        };
+
+        console.log("O total dos números da array é: " + soma);
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando itens impares</title>
+</head>
+<body>
+    <p>Dado um array que pode conter valores de tipos diferentes, mostre, num alert, qual é o valor que está no meio (pode ser aproximado)</p>
+
+    <script>
+        const lista = [15, 21, 40, 3, 7, 21, 15, 79, 58];
+
+        let somaImpares = 0;
+
+        for(let i = 0; i < lista.length; i++){
+            let n = lista[i];
+
+            if(n % 2 !== 0){
+                somaImpares += + n
+            }
+        };
+
+        alert("O total da soma dos números impares é: " + somaImpares);
+
+
+    </script>
+    
+</body>
+</html>
