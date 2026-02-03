@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos com pessoas</title>
+</head>
+<body>
+    <p>Dado os seguintes objetos:
+        const pessoa ={
+            nome: "Fabiano",
+            sobrenome: "Araujo"
+        };
+
+        const endereco = {
+            rua: "Angelo Pianaro",
+            numero: 29
+        }
+
+        Adicione uma propriedade chamada endereço em pessoa que aponte para o objeto endereço.
+
+        <script>
+
+        const pessoa ={
+            nome: "Fabiano",
+            sobrenome: "Araujo",
+        };
+
+        const endereco = {
+            rua: "Angelo Pianaro",
+            numero: 29
+        };
+
+        pessoa.endereco = endereco;
+
+        document.write(`A pessoa ${pessoa.nome} mora na rua ${pessoa.endereco.rua}, numero ${pessoa.endereco.numero}`);
+        console.log(pessoa)
+
+
+        </script>
+    </p>
+    
+</body>
+</html>

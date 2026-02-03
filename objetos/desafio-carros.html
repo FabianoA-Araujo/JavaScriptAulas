@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes de carro com Objeto</title>
+</head>
+<body>
+
+    <p>Dado o seguinte objeto:
+        const carro = {
+            modelo: "Uno",
+            ano: 2023,
+            km: 10000,
+            combustivel: "gasolina",
+            litrosConsumidos: 625
+        }
+
+        Mostre a seguinte mensagem na tela:
+        "O carro Uno 2023 fez em média xxx Km/l de gasolina"
+    </p>
+
+    <script>
+            const carro = {
+            modelo: "Uno",
+            ano: 2023,
+            km: 10000,
+            combustivel: "gasolina",
+            litrosConsumidos: 625,
+            marca: "Fiat"
+        }
+        
+        let mediaConsumo = carro.km / carro.litrosConsumidos;
+
+        document.write(`O carro ${carro.marca} ${carro.modelo} ano ${carro.ano} fez ${mediaConsumo} km/l de consumo médio`)
+    </script>    
+</body>
+</html>
