@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instanciando objetos com prompt</title>
+</head>
+<body>
+
+    <p>Pergunte em um prompt o nome e o email do usuário, armazene esses valores num objeto e mostre esse objeto no console.
+    </p>
+
+    <script>
+        let nome = prompt("Digite o seu nome completo.")
+        let email = prompt("Agora digite o seu e-mail.")
+
+        const pessoa = {
+            nome,
+            email
+        }
+        
+        console.log(pessoa);
+
+        // for(let prop in pessoa){
+        //     console.log(prop)
+        // }
+    </script>
+    
+</body>
+</html>
