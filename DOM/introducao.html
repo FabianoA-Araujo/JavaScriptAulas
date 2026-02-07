@@ -7,7 +7,31 @@
 </head>
 <body>
     <h1 id="titulo">Um título aqui para começar a brincar com DOM (Document Object Model)</h1>
-    <p>Este é apenas um parágrafo contento um <i>texto em itálico</i> qualquer</p>
+    <p id="paragrafo">Este é apenas um parágrafo contento um <i>texto em itálico</i> qualquer</p>
+
+    <hr>
+
+    <input type="text" id="user" value="valor preenchido">
+
+    <hr>
+    <h2>Lista de tarefas</h2>
+    <ol id="listaTarefas">
+        <li>Aprender CSS</li>
+        <li>Aprender JavaScript</li>
+        <li>Dominar DOM</li>
+        <li>Criar alguma coisa</li>
+    </ol>
+
+    <script>
+        document.getElementById("titulo").textContent = "Título alterado qualquer";
+
+        //inserindo novo elemento dentro da lista:
+
+        const tarefas = document.getElementById("listaTarefas");
+        let novaTarefa = "Aplicar à vagas de emprego" //Aqui faltou a explicação de como inserir o valor dessa variável dentro da lista
+
+        tarefas.innerHTML += "<li>teste</li>"
+    </script>
     
 </body>
 </html>

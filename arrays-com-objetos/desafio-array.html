@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array com 5 objetos - DOM</title>
+</head>
+<body>
+    <p>Dado uma array contendo 5 objetos (onde cada o bjeto possui duas propriedades "nome" e "email"), mostrar em uma lista UL cada um desses nomes com seus respectivos emails</p>
+
+    <ul id="listaContatos"></ul>
+    
+    <script>
+
+        //Objetos:
+        const pessoa1 = {nome: "Fabiano", sobrenome: "Araujo"};
+        const pessoa2 = {nome: "Luana", sobrenome: "Araujo"};
+
+        //Array recebendo os objetos:
+        const pessoas = [pessoa1, pessoa2];
+
+        //imprimindo:
+        console.log(pessoas[0].nome);
+        console.log(pessoas);
+
+        //Resolução do problema:
+
+        const contatos=[
+            {nome: "Fabiano", email: "fabiano@gmail.com"},
+            {nome: "Luana", email: "luana@gmail.com"},
+            {nome: "Francisco", email: "francisco@gmail.com"},
+            {nome: "Julia", email: "julia@gmail.com"},
+            {nome: "Antonio", email: "antonio@gmail.com"}
+        ]
+
+        const listaContatos = document.getElementById("listaContatos");
+
+        for(let i = 0; i < contatos.length; i++){
+            listaContatos.innerHTML += `<li> ${contatos[i].nome} : ${contatos[i].email}</li>`            
+        }
+
+
+
+
+        
+    </script>
+</body>
+</html>
