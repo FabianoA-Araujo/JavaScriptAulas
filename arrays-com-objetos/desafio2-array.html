@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array com objetos + tag table</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            border: 1px solid gray;
+        }
+
+        th,
+        td{
+            border: 1px solid gray;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <p>Dado uma array contendo 3 objetos, cada um representando um produto, mostrar em uma tabela (tag table) o nome, preço e a quantidade em estoque de cada produto.</p>
+
+    <table id="produtosTabela">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Preço</th>
+                <th>Qtde Estoque</th>
+            </tr>
+        </thead>
+
+        <tbody>
+        </tbody>
+    </table>
+
+    <script>
+
+        const produtos = [
+            {nome: "maça", preco: 10.00, quantidade: 20},
+            {nome: "banana", preco: 3.00, quantidade: 50},
+            {nome: "pêssego", preco: 8.00, quantidade: 15},
+            {nome: "laranja", preco: 3.00, quantidade: 48}
+        ];
+
+        const tabela = document.getElementById(produtosTabela);
+
+        for(let i = 0; i < produtos.length; i++){
+            produtosTabela.innerHTML += `<tr>
+                <td>${produtos[i].nome}</td>
+                <td>R$ ${produtos[i].preco}</td>
+                <td>${produtos[i].quantidade}</td>
+            </tr>`    
+        };
+
+
+    </script>
+        
+</body>
+</html>

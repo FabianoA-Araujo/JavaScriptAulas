@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informações de aluno</title>
+</head>
+<body>
+    <!-- <p>Dado o seguinte objeto:
+
+        const aluno = {
+            nome: "",
+            notas: [1, 3, 3, 8]
+        };
+
+        Mostre na tela as seguintes informações:
+        Nome;
+        Lista com as notas;
+        Média;
+        Aprovado/Reprovado
+    </p> -->
+
+    <div id = "output">
+        <!-- <h1>Informações do aluno</h1>
+        <h2>Nome do aluno:</h2>
+        
+        Notas do aluno:
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    
+        <p>Média: </p>
+        <p>Aprovado?</p> -->
+    </div>
+
+    <script>
+        
+        const aluno = {
+            nome: "Fabiano Alves Araujo",
+            notas: [5, 10, 8, 8]
+        };
+
+        const output = document.getElementById("output");
+
+        output.innerHTML += `<h1>Informações do Aluno</h1> <br> ${aluno.nome}`;
+        output.innerHTML += `<h2>Notas:</h2>`;
+
+        output.innerHTML += `<ul id="lista-notas"></ul>`;
+
+        const listaUl = document.getElementById("lista-notas");
+            
+        let soma = 0
+        
+        for(let i = 0; i < aluno.notas.length; i++){
+            soma += aluno.notas[i];
+            listaUl.innerHTML += `<li> ${aluno.notas[i].toFixed(1)} </li>`;
+        };
+            
+
+        let media = soma / aluno.notas.length;
+               
+        let resultadoFinal = (media >= 7) ? "Sim" : "Não";
+        
+        output.innerHTML += `<p>Média: ${media.toFixed(2)}</p>`;
+        output.innerHTML += `<p>O aluno está aprovado? ${resultadoFinal}</p>`;
+
+    </script>
+    
+</body>
+</html>
