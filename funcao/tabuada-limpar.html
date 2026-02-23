@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada com botão Cliquei</title>
+</head>
+<body>
+
+    <!-- <p>Criar um botão para limpar a tabuada</p> -->
+
+    <h1>Função</h1>
+
+    <input type="number" id="number">
+    <button onclick="mostrarTabuada()">Mostrar Tabuada</button>
+    <button onclick="limparTabuada()">Limpar</button>
+
+    <div id="tabuadaWrapper">
+        <ul id="tabuada"></ul>
+    </div>
+
+    <script>
+        const input = document.getElementById("number");
+        let tabuadaWrapper = document.getElementById("tabuadaWrapper");
+        const ulTabuada = document.getElementById("tabuada");
+        let imprimirTabuada = ""; /*Deixada aqui para acumular fora da funcao, assim, irá imprimir tabuada abaixo de tabuada. O correto é declarar dentro da função.*/        
+
+        function mostrarTabuada(){            
+            const inputValue = parseFloat(input.value);
+            
+            for(let i = 0; i <= 10; i++){
+                imprimirTabuada += `<li> ${inputValue} x ${i} = ${i * inputValue} </li>`;
+            }
+            tabuadaWrapper.innerHTML = `<h2> A Tabuada do ${inputValue} é: </h2>`;
+            tabuadaWrapper.appendChild(ulTabuada);
+            ulTabuada.innerHTML = imprimirTabuada;
+        }
+
+        function limparTabuada(){
+            tabuadaWrapper.innerHTML = ""; //limpar o conteúdo, e não apagar a div
+            imprimirTabuada = ""; //limpar a variável que acumula o HTML
+        }        
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada com botão Cliquei</title>
+</head>
+<body>
+
+    <!-- <p>Mostrar a tabuada de um número recebido por input, através de um botão clique "Mostrar Tabuada" </p> -->
+
+    <h1>Função</h1>
+
+    <input type="number" id="number">
+    <button onclick="mostrarTabuada()">Mostrar Tabuada</button>
+
+    <div id="tabuadaWrapper">
+        <ul id="tabuada"></ul>
+    </div>
+
+    <script>
+        const input = document.getElementById("number");
+                
+        function mostrarTabuada(){
+            let imprimirTabuada = "";
+            const inputValue = parseFloat(input.value);
+            let tabuadaWrapper = document.getElementById("tabuadaWrapper");
+            const ulTabuada = document.getElementById("tabuada");
+            
+            for(let i = 0; i <= 10; i++){
+                imprimirTabuada += `<li> ${inputValue} x ${i} = ${i * inputValue} </li>`;
+            }
+            tabuadaWrapper.innerHTML = `<h2> A Tabuada do ${inputValue} é: </h2>`;
+            tabuadaWrapper.appendChild(ulTabuada);
+            ulTabuada.innerHTML = imprimirTabuada;
+        }
+
+    </script>
+    
+</body>
+</html>
