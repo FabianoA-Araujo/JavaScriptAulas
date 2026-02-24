@@ -3,11 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Area de um triângulo</title>
+    <title>Area de um triângulo com função</title>
 </head>
 <body>
+    <h1>Função para calcular área de um triângulo</h1>
     <!-- <p>Escreva um programa para calcular a area de um triângulo</p> -->
-    <input type="number">
+    <input type="number" id="number1" placeholder="Base do triângulo">
+    <input type="number" id="number2" placeholder="Altura do triângulo">
+    <input type="text" id="unidade" placeholder="un. de medida">
+    <button onclick="calcularTrinangulo()">Calcular área</button>
+    <!-- b * a / 2 -->
+     <div id="wrapper"></div>
+
+    <script>
+        number1 = document.getElementById("number1");
+        number2 = document.getElementById("number2");
+        unidade = document.getElementById("unidade");
+        const wrapper = document.getElementById("wrapper");
+        let area = 0;
+
+        function calcularTrinangulo(){
+            let calcular = (parseFloat(number1.value) * parseFloat(number2.value)).toFixed(2);
+            area = `A area do triângulo é: ${calcular} ${unidade.value}²`;
+            wrapper.innerHTML = area;
+        }
+
+    </script>
+
     
 </body>
 </html>
