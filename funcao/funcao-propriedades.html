@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular a area de um círculo com função + propriedades</title>
+</head>
+<body>
+    <!-- <p>Em uma tela há um input (raio) e uma tag <output>. Há também 2 botões, cada um com uma funcionalidade diferente, a saber:
+        * Obter o raio via prompt e mostrar a área em output;
+        * Obter o raio via input e mostrar a área em um output.
+    </p> -->
+    <h1>Calcular área de um círculo</h1>
+    <input type="number" id="raio" placeholder="Raio da circunferência">
+    <button onclick="receberRaioInput()">Área Input</button>
+    <button onclick="receberRaioPrompt()">Área Prompt</button>
+    <div id="imprimirArea"></div>
+    
+    <script>
+        const imprimirArea = document.getElementById("imprimirArea")
+        const raio = document.getElementById("raio")
+        // let acumularHtml = ""
+
+        function receberRaioInput(){
+            let raioValue = parseFloat(raio.value)
+            calcularArea(raioValue)
+        }
+        
+        function receberRaioPrompt(){
+            let raioValue = parseFloat(prompt("Digite o raio do círculo"));
+            calcularArea(raioValue)
+        }
+
+        function calcularArea(raio){
+            let area = parseFloat(Math.PI * (raio * raio)).toFixed(4);
+            imprimirArea.innerHTML = `A área do círculo de raio ${raio} é: ${area}`
+        }
+
+    </script>
+</body>
+</html>
