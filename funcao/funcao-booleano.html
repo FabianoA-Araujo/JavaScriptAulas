@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função retornar booleano</title>
+</head>
+<body>
+    <p>Crie uma função que retorne um booleando indicando se um número é par</p>
+
+
+    <script>
+        function booleano(n){
+            if (n % 2 === 0){
+                return true
+            }
+            else {
+                return false
+            }
+        }
+
+        console.log(booleano(7));
+
+        // Não precisa de bloco if porque a função já retorna booleano, assim:
+
+        function ehPar(n){
+            return n % 2 === 0
+        }
+        
+        console.log(ehPar(8));
+    </script>
+</body>
+</html>

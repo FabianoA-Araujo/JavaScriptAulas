@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de funções</title>
+</head>
+<body>
+    <h1>Tipos de Funções</h1>
+    <ul>
+        <li>Functions Declarations</li>
+        <li>Functions Expressions</li>
+        <li>Arrow Functions</li>
+    </ul>
+
+    <script>
+        //Functions Declarations
+
+        function ola1(nome){
+            console.log("Ola de function declaration: " + nome)
+        };
+
+        ola1("Fabiano");
+
+        
+        // Functions Expressions
+
+        const ola2  = function(nome){
+            console.log("Ola de function expression: " + nome)            
+        };
+
+        ola2("Luana");
+
+        
+        // Array também recebe função
+
+        const arr = [ ola1, ola2, function (nome){console.log("Ola de função anônima dentro de array: " + nome)} ];
+        
+        arr[2]("Francisco");
+
+
+        //Arrow Function
+
+        const ola3 = (nome) => {
+            console.log("Ola de uma Arrow Function: " + nome)
+        };
+
+        ola3("Chiquinho do pai")
+
+        // Arrow de forma simplificada:
+
+        const soma = (n1, n2) => n1 + n2;
+        console.log(soma(3,4));
+
+        const multiplicacao = n => n * 2; /*Quando a funcao espera somente um parametro, pode-se omitir o parenteses*/
+        console.log(multiplicacao(5));
+
+
+    </script>
+</body>
+</html>

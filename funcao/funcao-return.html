@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular a area de um círculo com função + propriedades</title>
+</head>
+<body>
+    <!-- <p>Em uma tela há um input (raio) e uma tag <output>. Há também 4 botões, cada um com uma funcionalidade diferente, a saber:
+        * Obter o raio via prompt e mostrar num alert;
+        * Obter o raio via prompt e mostrar a área em um output;
+        * Obter o raio via input e mostrar num alert;
+        * Obter o raio via input e mostrar num output.
+    </p> -->
+    <h1>Calcular área de um círculo</h1>
+    <input type="number" id="raio" placeholder="Raio da circunferência">
+    <button onclick="raioPromptAlert()">Receber Prompt e Mostrar no Alert</button>
+    <button onclick="raioPromptOutput()">Receber Prompt e Mostrar no Output</button>
+    <button onclick="raioInputAlert()">Receber Input e Mostrar no Alert</button>
+    <button onclick="raioInputOutput()">Receber input e Mostrar no Output</button>
+    <div id="imprimirArea"></div>
+    
+    <script>
+        const imprimirArea = document.getElementById("imprimirArea");
+        const raioInput = document.getElementById("raio");
+
+
+        function raioPromptAlert(){
+            let raio = parseFloat(prompt("Digite o raio da circunferência"));
+            let retorno = calcularArea(raio);
+            alert(retorno)
+
+        }
+
+        function raioPromptOutput(){
+            let raio = parseFloat(prompt("Digite o raio da circunferência"));
+            let retorno = calcularArea(raio);
+            imprimirArea.innerHTML = retorno;
+        }
+
+        function raioInputAlert(){
+            let raio = parseFloat(raioInput.value);
+            let retorno = calcularArea(raio);
+            alert(retorno)
+        }
+
+        function raioInputOutput(){
+            let raio = parseFloat(raioInput.value);
+            let retorno = calcularArea(raio);
+            imprimirArea.innerHTML = retorno;
+        }
+
+        function calcularArea(raio){
+            let area = parseFloat(Math.PI * (raio * raio)).toFixed(4);
+            return `A área do círculo de raio ${raio} é: ${area}`
+        }
+
+    </script>
+</body>
+</html>

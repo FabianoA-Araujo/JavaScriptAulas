@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função para somar valores</title>
+</head>
+<body>
+    <p>Crie uma função chamada somar() que receba dois valores e retorne a somar</p>
+    <input type="number" id="n1" placeholder="Digite um número">
+    <input type="number" id="n2" placeholder="Digite um número">
+    <button id="somar" onclick="somar()">Somar</button>
+    <div id="imprimir"></div>
+    
+
+    <script>
+        const n1 = document.getElementById("n1");
+        const n2 = document.getElementById("n2");
+        const imprimirSoma = document.getElementById("imprimir");
+        
+        function somar(){
+            let numero1 = parseFloat(n1.value);
+            let numero2 = parseFloat(n2.value);
+            resultado = calcular(numero1, numero2)
+            imprimirSoma.innerHTML = `O resultado da soma de ${numero1} + ${numero2} é: ${resultado}`          
+        }
+
+        function calcular(n1, n2){
+            resultado = n1 + n1;
+            return resultado.toFixed(2)
+        }
+
+        // Forma simplificada, somente para imprimir:
+
+        function somarImprimir(a, b){
+            return a + b
+        }
+
+         console.log(somarImprimir(5, 9));
+        
+    </script>
+</body>
+</html>

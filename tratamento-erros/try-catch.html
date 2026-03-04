@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tratamento de erros</title>
+    <script src="try-catch.js"></script>
+</head>
+<body>
+    <p>
+        1 - Criar um arquivo JavaScript com duas funções:
+        a - calcularAreaRetangulo;
+        b - calcularAreaTriangulo;
+        c - calcularAreaCirculo.
+
+        2 - Lançar uma exceção caso os parâmetros estejam incorretos;
+
+        3 - Interceptar o erro na execução.
+    </p>
+    <h1>Try Catch - Tratamento de erros</h1>
+    <div id="imprimir"></div>
+
+    <script>
+        let imprimir = document.getElementById("imprimir");
+        let somarHtml = "";
+
+        try{
+            let retangulo = calcularAreaRetangulo(5, 10);
+            somarHtml += `<p>A área do retângulo é: ${retangulo}</p>`;
+        } catch (e) {
+            somarHtml += (`<p style="color:red"> Erro Retângulo: ${e}</p>`);
+        }
+
+        try{
+            let triangulo = calcularAreaTriangulo(6, 9);
+            somarHtml += `A área do triângulo é: ${triangulo}<br><br>`;
+        } catch (e){
+            somarHtml += (`<p style="color:red"> Erro Triângulo: ${e}</p>`);
+        }
+
+        try{
+            let circulo = calcularAreaCirculo("dfsdf");
+            somarHtml += `A area do circulo é: ${circulo}`
+        } catch(e){
+            somarHtml += (`<p style="color:red"> Erro Círculo: ${e.message}</p>`);
+        }
+
+        imprimir.innerHTML = somarHtml;
+
+        
+
+        
+        // const obj = {nome: "Fabiano"}
+
+        // function addPropEmObjeto(prop, valor, obj){
+        //     if (obj[prop] === undefined){
+        //         obj[prop] = valor
+        //     }
+        // }
+
+        // addPropEmObjeto("sobrenome", "Maria", obj)
+
+        // console.log(obj)
+
+    </script>
+</body>
+</html>

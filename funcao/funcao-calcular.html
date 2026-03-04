@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função para calcular</title>
+</head>
+<body>
+    <p>Cria uma função chamada calcular() que receba dois números e uma string com um dos seguintes valores: +, -, * ou /.
+        Retorne a soma, subtração, multiplicação ou divisão dependendo do operador passado por parâmetro.
+    </p>
+    
+    <input type="number" id="n1" placeholder="Digite um número">
+    <input type="text" id="operador" placeholder="+, -, * ou /">
+    <input type="number" id="n2" placeholder="Digite um número">
+    <button id="somar" onclick="calcular()">Somar</button>
+    <div id="imprimir"></div>
+    
+
+    <script>
+        const n1 = document.getElementById("n1");
+        const n2 = document.getElementById("n2");
+        const operador = document.getElementById("operador");
+        const imprimirResultado = document.getElementById("imprimir");
+
+        function calcular(){
+            let numero1 = parseFloat(n1.value);
+            let numero2 = parseFloat(n2.value);
+            let op = operador.value;
+            let resultado = 0;
+
+            switch(op){
+                case "+":
+                    resultado = numero1 + numero2;
+                    break;
+                case "-":
+                    resultado = numero1 - numero2;
+                    break;
+                case "*":
+                    resultado = numero1 * numero2;
+                    break;
+                case "/":
+                    resultado = numero1 / numero2;
+                    break;
+                default:
+                    resultado = "Operador inválido";     
+            }
+            
+            imprimirResultado.innerHTML = `O resultado da operação ${numero1} ${op} ${numero2} é: ${resultado}`;
+
+        }
+    </script>
+    
+</body>
+</html>
