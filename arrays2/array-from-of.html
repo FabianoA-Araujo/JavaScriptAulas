@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays com métodos from e of</title>
+</head>
+<body>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, harum!</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, harum!</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, harum!</p>
+    <p>hoje foi um dia muito legal com a minha esposa e o nosso filho</p>
+    
+
+    <script>
+        const paragrafos = document.querySelectorAll("p")
+
+        paragrafos.forEach(function(p){
+            console.log(p.textContent)
+        })
+
+        //Brincadeira para númerar os parágrafos:
+
+            paragrafos.forEach(function(p, i){
+            p.textContent = `${++i} - ${p.textContent}` //++i serve para não começar com 0
+        })
+
+    </script>
+</body>
+</html>

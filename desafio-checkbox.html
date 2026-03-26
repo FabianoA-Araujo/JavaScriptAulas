@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Checkbox</title>
+</head>
+<body>
+    <h1 id="title1">Curso de JavaScript - Desafio Checkbox</h1>
+
+    <main>
+        <h2>Subtítulo</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam, cum.</p>
+    </main>
+
+    <form action="#"></form>
+    <input type="text" id="txtNome" placeholder="nome"> <br><br>
+    <input type="text" id="txtEmail" placeholder="email"> <br><br>
+
+    <input type="checkbox" id="contrato">
+    <label for="contrato">li e aceito o seguinte contrato</label><br><br>
+    <textarea name="" id="" cols="30" rows="10">Este contrato nos dá direito a...</textarea>
+    <input type="submit" id="btnCadastrar" value="cadastrar" disabled>
+
+    <script>
+
+        const btn = document.getElementById("btnCadastrar")
+        const checkbox = document.getElementById("contrato")
+
+        function alternarBotao(){
+            btn.disabled = !checkbox.checked;
+        }
+
+        checkbox.onclick = alternarBotao;
+        
+
+    </script>    
+</body>
+</html>
